@@ -141,4 +141,13 @@ class SalariesController extends Controller
     {
         return view('salaries.print');
     }
+
+
+    public function history(){
+        $employee = Employee::select('name', 'id', 'all_salary', 'job_id', 'due_date', 'const_salary', 'salary')
+        ->where('get_his_salay', '1')
+        ->with('employeejob')
+        ->paginate(12);
+    return view('salaries.index', compact('employee'));
+    }
 }

@@ -195,6 +195,8 @@
                     <ul class="slide-menu">
                         <li><a class="slide-item" href="{{ route('add_salary') }}">{{ __('site.add salaries') }}</a>
                         </li>
+                        <li><a class="slide-item" href="{{ route('salary_history') }}">سجل الرواتب</a>
+                        </li>
                     </ul>
                 </li>
             @endcan

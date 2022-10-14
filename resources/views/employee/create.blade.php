@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="control-group form-group mb-0 col-md-3">
                                         <label class="form-label">{{ __('site.age') }}</label>
-                                        <input type="text" class="form-control required" name='age' placeholder="Address">
+                                        <input type="text" class="form-control required" name='age' placeholder="age">
                                     </div>
 
                             </section>
@@ -98,20 +98,30 @@
                                 </div>
                                 <div class="row m-2">
                                     <div class="col-md-3">
+                                        <label for="">
+                                            الراتب الثابت
+                                        </label>
                                         <input type="number" name="const_salary" id="const_salary" readonly
                                             class="form-control">
                                     </div>
                                     <div class="col-md-3">
+                                        <label>حافز القسم </label>
                                         <input type="number" name="categories_salary" id="cat_salary" readonly
                                             class="form-control">
                                     </div>
                                     <div class="col-md-3">
+                                        <label for="">
+                                            مجموع المرتب
+                                        </label>
                                         <input type="number" name="all_salary" id="all_salary" readonly
                                             class="form-control">
                                     </div>
                                     <div class="col-md-3">
-                                        <a href="#" class="btn" id="clac_salary">
-                                            claculator salary
+                                        {{-- <br> --}}
+                                        <label>   حساب مرتب الموظف </label>
+                                        <br>
+                                        <a href="#" class="btn btn-info" id="clac_salary">
+                                            احسب
                                         </a>
                                     </div>
                                 </div>

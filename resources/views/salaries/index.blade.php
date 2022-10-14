@@ -70,10 +70,17 @@
                                             <td>{{ number_format($emp->const_salary) }}</td>
                                             <td>{{ number_format($emp->all_salary) }}</td>
                                             <td>
+                                                @if(request()->routeIs('add_salary'))
                                                 <a href="{{ route('print_salary', $emp->id) }}"
                                                     class="btn btn-outline-primary btn-sm   ">
                                                     {{ __('site.pay salary') }}
                                                 </a>
+                                                @else
+                                                <span class="badge badge-info">
+                                                    مدفوعه
+                                                </span>
+                                                @endif
+
                                             </td>
                                         </tr>
                                     @endforeach

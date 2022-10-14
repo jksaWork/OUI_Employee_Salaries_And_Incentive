@@ -91,6 +91,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix('salary')->group(function () {
         Route::get('add_salary', [SalariesController::class, 'index'])->name('add_salary');
+        Route::get('salary-history', [SalariesController::class, 'history'])->name('salary_history');
         Route::post('search', [SalariesController::class, 'search'])->name('search_salary');
         Route::get('pay_salary', [SalariesController::class, 'pay'])->name('pay_salary');
         Route::get('print/{id}', [SalariesController::class, 'printSalary'])->name('print_salary');
